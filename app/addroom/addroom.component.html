@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>Add Room</h1>
+
+  <div class="row" style="margin-top: 30px;">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Room number</label>
+        <input [(ngModel)]="roomno" type="number" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Room Type</label>
+        <input [(ngModel)]="roomtype" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Price</label>
+        <input [(ngModel)]="price" type="number" class="form-control">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <label for="">Status</label>
+        <input [(ngModel)]="status" type="text" class="form-control">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <label for="">Select Imagename</label>
+      <input accept="image/*" (change)="onChange($event)" type="file" class="form-control">
+    </div>
+    <div class="col-md-6" *ngIf="imageUrl != null">
+      <label for="">Imagename</label>
+      <img [src]="imageUrl" class="Imagename" alt="" style="max-height: 100px;">
+    </div>
+    <div class="row" style="margin-top: 30px">
+      <div class="col-md-12">
+        <button (click)="onAdd()" class="btn btn-info">Add</button>
+        <button (click)="onCancel()" class="btn btn-warning" style="margin-left: 10px">Cancel</button>
+      </div>
+    </div>
+  </div>
+  
+  
+    
+  

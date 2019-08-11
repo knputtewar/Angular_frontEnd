@@ -1,0 +1,29 @@
+<div class="container">
+  <h1>Rooms</h1>
+
+  <table class="table table-striped" >
+    <thead>
+      <tr class="active">
+        <th class="warning">Images</th>
+        <th class="active"> Room Number</th>
+        <th class="success">Room type</th>
+        <th class="danger" >Price</th>
+        <th class="info" >Status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor = "let R of room " >
+        <td><img class="room-imagename" src="http://localhost:3000/{{R.imagename}}" alt=""></td>
+        <td>{{R.roomno}}</td>
+        <td>{{R.roomtype}}</td>
+        <td>{{R.price}}</td>
+        <td>{{R.status}}</td>
+       <td>
+          <button (click)="onDetails(room)" class="btn btn-success"><i class="glyphicon glyphicon-info-sign"></i></button>
+          <button (click)="onDelete(room)" class="btn btn-danger" style="margin-left: 10px"><i class="glyphicon glyphicon-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
